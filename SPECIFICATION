@@ -1,0 +1,63 @@
+
+# PDS Technical Specification (v1.0)
+
+## 1. Storage Location Selection
+To balance compatibility and user experience, the data storage fields are defined as follows:
+* **Primary Data Field**: `UserComment` (EXIF).
+    * **Reason**: This field is typically not occupied by the system or average users and remains hidden in album details by default, preserving the original photo note-taking experience.
+* **Auxiliary Tag Field**: `Description` (EXIF).
+    * **Usage**: Write the fixed tag `#PhotoDiary`.
+    * **Purpose**: To prevent users from unknowingly deleting photos that contain important diary data during album cleanup.
+
+## 2. Data Format (JSON)
+Diary information should be serialized into JSON format and stored in the `UserComment` field.
+
+### Basic Field Definitions:
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `diary_id` | String | Unique identifier for the diary. Photos with the same ID are treated as part of the same entry. |
+| `timestamp` | String | The specific date and time the diary was recorded. |
+| `version` | String | Standard version number (currently 1.0). |
+| `app` | String | The writing tool used (Example: PhotoDiaryPro). |
+| `location_name` | String | User-defined location name (e.g., "Dinghao Building"), not coordinates. |
+| `mood` | String | Mood identifier (Example: happy). |
+| `weather` | String | Weather identifier (Example: clear). |
+| `content` | String | The main body text of the diary. |
+
+## 3. Multi-Photo Logic
+If a single diary entry includes multiple photos:
+* Every photo must contain the complete diary text to prevent data loss if the user deletes some of the photos.
+* All associated photos must share the same `diary_id`.
+
+# PDS 技术规范 (v1.0)
+
+## 1. 存储位置选择
+为了兼顾兼容性与用户体验，数据存储字段定义如下：
+* **主数据字段**：`UserComment` (EXIF)。
+    * **原因**：该字段通常不被系统或普通用户占用，且在相册详情中默认不可见，不破坏原有的照片备注体验。
+* **辅助说明字段**：`Description` (EXIF)。
+    * **用途**：写入固定标签 `#PhotoDiary`。
+    * **目的**：防止用户在清理相册时不知道该照片包含重要日记数据。
+
+## 2. 数据格式 (JSON)
+日记信息应以 JSON 格式序列化后存入 `UserComment`。
+
+
+### 基础字段定义：
+| 字段名 | 类型 | 说明 |
+| :--- | :--- | :--- |
+| `diary_id` | String | 日记唯一标识符。相同 ID 的照片视为同一篇日记。 |
+| `timestamp` | String | 日记记录的具体日期和时间。 |
+| `version` | String | 标准版本号（当前为 1.0）。 |
+| `app` | String | 写入工具（示例：PhotoDiaryPro）。 |
+| `location_name` | String | 用户自定义的地点名称（如“鼎好大厦”），非经纬度。 |
+| `mood` | String | 心情标识（示例：happy）。 |
+| `weather` | String | 天气标识（示例：clear）。 |
+| `content` | String | 日记的正文内容。 |
+
+
+
+## 3. 多图处理逻辑
+如果一篇日记包含多张照片：
+* 每张照片都必须写入完整的日记文本，以防用户删除部分照片导致数据丢失。
+* 所有相关照片必须共享同一个 `diary_id`。
