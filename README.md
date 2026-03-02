@@ -21,7 +21,7 @@ In the era of mobile internet, user data is often trapped within the proprietary
 
 
 ## 📖 Quick Start
-Developers can refer to [SPECIFICATION.md](./SPECIFICATION.md) for detailed information on data structures and storage specifications.
+Developers can refer to [SPECIFICATION.md](./https://github.com/dongbei-pm/PhotoDiary-Standard/blob/main/SPECIFICATION) for detailed information on data structures and storage specifications.
 
 
 
@@ -44,4 +44,4 @@ Developers can refer to [SPECIFICATION.md](./SPECIFICATION.md) for detailed info
 * **防误删机制**：在照片元数据中添加特定标记，防止用户清理相册时误删。
 
 ## 📖 快速开始
-开发者可以通过阅读 [SPECIFICATION.md](./SPECIFICATION.md) 来了解具体的数据结构和存储规范。
+开发者可以通过阅读 [SPECIFICATION.md](./https://github.com/dongbei-pm/PhotoDiary-Standard/blob/main/SPECIFICATION) 来了解具体的数据结构和存储规范。
