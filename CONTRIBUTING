@@ -1,0 +1,21 @@
+# Contributing Guide
+
+We warmly welcome developers to join us in refining the **PhotoDiary Standard**. You can contribute in the following ways:
+
+1. **Submit a PR**: If you have suggestions for improving the JSON structure, encryption algorithms, or storage fields.
+2. **Develop SDKs**: Create universal PDS parsing libraries for iOS (Swift/Obj-C), Android (Kotlin/Java), Flutter, or other frameworks.
+3. **Showcase Your Project**: If you have developed an App that follows the PDS standard, please add your project link to our README.
+
+**Contact Us**: Please submit your ideas or report bugs via GitHub Issues.
+
+# 贡献指南
+
+我们非常欢迎开发者参与完善 **PhotoDiary Standard**。你可以通过以下方式做出贡献：
+
+1. **提交 PR**：如果你对 JSON 结构、加密算法或存储字段有更好的改进建议。
+2. **开发 SDK**：为 iOS (Swift/Obj-C)、Android (Kotlin/Java) 或 Flutter 开发通用的 PDS 解析库。
+3. **案例分享**：如果你开发了遵循 PDS 标准的 App，请在 README 中添加你的项目链接。
+
+**联系我们**：请通过 GitHub Issues 提交你的想法。
+
+
